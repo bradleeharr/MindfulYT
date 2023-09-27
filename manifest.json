@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Mindful YouTube Browsing",
+    "version": "0.1",
+    "description": "A mindful companion for YouTube browsing sessions, gently reminding you to take breaks and be aware of your online time.",
+
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "permissions": ["activeTab", "notifications"],
+    "content_scripts": [{
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["overlay.js", "messages.js", "content.js"]
+    }]
+}
