@@ -7,9 +7,10 @@
     "icons": {
         "48": "icons/icon.png"
     },
-    "permissions": ["activeTab", "notifications"],
+    "options_page": "options.html",
+    "permissions": ["activeTab", "notifications", "storage"],
     "content_scripts": [{
         "matches": ["*://*.youtube.com/*"],
-        "js": ["overlay.js", "messages.js", "content.js"]
+        "js": ["config.js", "overlay.js", "messages.js", "content.js"]
     }]
 }
