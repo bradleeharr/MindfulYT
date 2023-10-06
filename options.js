@@ -14,5 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.storage.sync.set({minTime, maxTime}, () => {
             console.log('Configuration saved');
         });
+         // Show feedback message
+         const feedbackElement = document.getElementById('feedback');
+         feedbackElement.textContent = 'Settings saved!';
+         feedbackElement.style.display = 'inline';
+ 
+         // Hide feedback message after 3 seconds
+         setTimeout(() => {
+             feedbackElement.style.display = 'none';
+         }, 3000);
     });
 });
