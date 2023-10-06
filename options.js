@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Save button listener
     document.getElementById('save').addEventListener('click', () => {
-        let minTime = parseInt(document.getElementById('minTime').value) || 10000;
-        let maxTime = parseInt(document.getElementById('maxTime').value) || 300000;
+        let minTime = parseInt(document.getElementById('minTime').value*1000) || 10000;
+        let maxTime = parseInt(document.getElementById('maxTime').value*1000) || 300000;
         // Save the configuration
         chrome.storage.sync.set({minTime, maxTime}, () => {
             console.log('Configuration saved');
