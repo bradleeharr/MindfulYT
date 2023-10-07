@@ -14,6 +14,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            width: 100vw;
         }
 
         .container {
@@ -62,15 +63,20 @@
             Max Time (s):
             <input type="number" id="maxTime" min="1" value="300">
         </label>
+        <label>
+            Blacklist Channel:
+            <input type="text" id="blackList">
+        </label>
         <br/>
-        <!-- More to add -->
         <label>
             Enable Notifications:
             <input type="checkbox" id="enableNotifications" checked>
         </label>
         <br/>
-        <button id="save">Save</button>
         <span id="feedback" style="display:none; margin-left: 10px; color: green;"></span>
+        <br/><br/>
+        <button id="save">Save</button>
+        <br/>
 
     </div>
     <script src="options.js"></script>
