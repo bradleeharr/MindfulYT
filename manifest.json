@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Mindful YouTube Browsing",
-    "version": "0.1",
+    "version": "0.2",
     "description": "A mindful companion for YouTube browsing sessions, gently reminding you to take breaks and be aware of your online time.",
 
     "icons": {
