@@ -8,6 +8,12 @@ function randomPopupTrigger() {
     }, randomTime);
 }
 
+function blockShorts() {
+    const shortsContainer = document.querySelector("#shorts-container");
+    if (shortsContainer) {
+        shortsContainer.remove();
+    }
+}
 
 function checkForChannelName() {
     let channelElement = document.querySelector("a.yt-simple-endpoint.style-scope.yt-formatted-string");
@@ -18,13 +24,22 @@ function checkForChannelName() {
     }
 }
 
+
+chrome.storage.sync.get(['blockShortsSet'], (result) => {
+    const isBlockShortsSet = result.blockShortsSet !== undefined ? result.blockShortsSet : true; 
+    console.log(isBlockShortsSet);
+    if (isBlockShortsSet === true) {
+        blockShorts();
+    }
+});
+
 if (window.location.pathname.includes("/watch")) {
     var channelNameInterval = setInterval(checkForChannelName, 1000);  // Check every second
 }
 
 chrome.storage.sync.get(['minTime', 'maxTime'], (result) => {
     window.config = {
-        minTime: result.minTime || 10000,  // default to 10 seconds if not set
+        minTime: result.minTime || 60000,  // default to 60 seconds if not set
         maxTime: result.maxTime || 300000  // default to 5 minutes if not set
     };
     randomPopupTrigger();

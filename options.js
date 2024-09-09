@@ -19,10 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let minTime = parseInt((minTime_m*MIN_TO_S + minTime_s)*S_TO_MS) || 10*S_TO_MS;
         let maxTime = parseInt((maxTime_m*MIN_TO_S + maxTime_s)*S_TO_MS) || 300*S_TO_MS;
 
+        let blockShortsSet = document.getElementById('blockShortsSet').checked;
+
         // Save the configuration
-        chrome.storage.sync.set({minTime, maxTime}, () => {
+        chrome.storage.sync.set({minTime, maxTime, blockShortsSet}, () => {
             console.log('Configuration saved');
+            console.log(blockShortsSet);
         });
+
+
          // Show feedback message
          const feedbackElement = document.getElementById('feedback');
          feedbackElement.textContent = 'Settings saved!';
