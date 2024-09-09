@@ -56,16 +56,28 @@
     <div class="container">
         <h1>Extension Options</h1>
         <label>
-            Min Time (s):
-            <input type="number" id="minTime" min="1" value="10">
+            Min Time:
+            <input type="number" id="minTime-m" min="1" value="10">
+            (min)
+            <input type="number" id="minTime-s" min="1" value="00">
+            (s)
         </label>
         <label>
-            Max Time (s):
-            <input type="number" id="maxTime" min="1" value="300">
+            Max Time:
+            <input type="number" id="maxTime-m" min="1" value="30">
+            (min)
+            <input type="number" id="maxTime-s" min="1" value="00">
+            (s)
+        </label>
+        <label>
         </label>
         <label>
             Blacklist Channel:
             <input type="text" id="blackList">
+        </label>
+        <label>
+            Blacklisted Channels
+            <div id="blacklisted"></div>
         </label>
         <br/>
         <label>
