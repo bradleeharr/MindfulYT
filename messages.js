@@ -7,9 +7,9 @@ window.messagesList = [
     "The canvas of life awaits your brushstroke. Paint a masterpiece of unparalleled achievement!",
     "Consider practicing mindfulness or meditation to relax and focus.",
     "This is a friendly reminder. It\'s been a while. Consider getting off YouTube and looking at something else when you get a chance.",
-    "I am as bad as the worst, but, thank God, I am as good as the best. -Walt Whitman",
-    "Peace is always beautiful. - Walt Whitman, Leaves of Grass",
-    "Nothing will work unless you do. -Maya Angelou"
+    "I am as bad as the worst, but, thank God, I am as good as the best. —Walt Whitman",
+    "Peace is always beautiful. —Walt Whitman, Leaves of Grass",
+    "Nothing will work unless you do. —Maya Angelou"
 
 
 ];
