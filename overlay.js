@@ -66,6 +66,8 @@ window.showOverlay = function(message) {
     // Remove overlay on click
     overlay.addEventListener('click', () => {
         document.body.removeChild(overlay);
+        // But add the random popup trigger again
+        randomPopupTrigger();
     });
 
     // Pause video (if any)

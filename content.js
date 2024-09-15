@@ -4,7 +4,6 @@ function randomPopupTrigger() {
     setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * window.messagesList.length);
         window.showOverlay(window.messagesList[randomIndex]); 
-        randomPopupTrigger(); 
     }, randomTime);
 }
 
