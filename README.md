@@ -1,5 +1,11 @@
 # MindfulYT v0.2
-Browser extension. I notice I spend too much time on YouTube, so this is a browser extension with reminders to take breaks. 
+Browser extension. This is a simple browser extension that will occasionally prompt you a simple reminder to take a break when watching YouTube videos. 
+
+Features
+
+* Block Shorts
+
+
 
 To use, clone the repository, then load the unpacked extension in Chrome.
 

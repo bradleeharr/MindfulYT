@@ -3,7 +3,10 @@ function randomPopupTrigger() {
     let randomTime = Math.random() * (window.config.maxTime - window.config.minTime) + window.config.minTime;
     setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * window.messagesList.length);
-        window.showOverlay(window.messagesList[randomIndex]); 
+        // Check if the document is visible, o.w. don't display the overlay
+        if (document.visibilityState === "visible") {
+            window.showOverlay(window.messagesList[randomIndex]); 
+        }
     }, randomTime);
 }
 
