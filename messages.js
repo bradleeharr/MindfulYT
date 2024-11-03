@@ -14,4 +14,5 @@ window.messagesList = [
     "I feel confident because I'm the best player in the world. It's simple. —LeBron James"
     "I don't read books much. -LeBron James"
     "Never say never, because limits, like fears, are often just an illusion. -Michael Jordan"
+    "Do or do not. There is no try."
 ];
