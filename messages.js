@@ -10,9 +10,9 @@ window.messagesList = [
     "I am as bad as the worst, but, thank God, I am as good as the best. —Walt Whitman",
     "Peace is always beautiful —Walt Whitman, Leaves of Grass",
     "Nothing will work unless you do. —Maya Angelou",
-    "Time is real, we can't rewind it. Out of everybody I met, who told the truth? Time did. —Common"
-    "I feel confident because I'm the best player in the world. It's simple. —LeBron James"
-    "I don't read books much. -LeBron James"
-    "Never say never, because limits, like fears, are often just an illusion. -Michael Jordan"
+    "Time is real, we can't rewind it. Out of everybody I met, who told the truth? Time did. —Common",
+    "I feel confident because I'm the best player in the world. It's simple. —LeBron James",
+    "I don't read books much. -LeBron James",
+    "Never say never, because limits, like fears, are often just an illusion. -Michael Jordan",
     "Do or do not. There is no try."
 ];
