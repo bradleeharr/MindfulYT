@@ -1,11 +1,15 @@
-const MIN_TO_S = 60;
-const S_TO_MS = 1000;
+// options.js
+
 // When the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Load existing config
-    chrome.storage.sync.get(['minTime', 'maxTime'], (result) => {
-        document.getElementById('minTime').value = result.minTime || '';
-        document.getElementById('maxTime').value = result.maxTime || '';
+    chrome.storage.sync.get(['minTime_m', 'minTime_s', 'maxTime_m', 'maxTime_s'], (result) => {
+        console.log(result)
+        document.getElementById('minTime-m').value = result.minTime_m || '';
+        document.getElementById('minTime-s').value = result.minTime_s || '';
+
+        document.getElementById('maxTime-m').value = result.maxTime_m || '';
+        document.getElementById('maxTime-s').value = result.maxTime_s || '';
     });
 
     // Save button listener
@@ -15,14 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let maxTime_m = parseInt(document.getElementById('maxTime-m').value);
         let maxTime_s = parseInt(document.getElementById('maxTime-s').value);
-        
-        let minTime = parseInt((minTime_m*MIN_TO_S + minTime_s)*S_TO_MS) || 10*S_TO_MS;
-        let maxTime = parseInt((maxTime_m*MIN_TO_S + maxTime_s)*S_TO_MS) || 300*S_TO_MS;
-
         let blockShortsSet = document.getElementById('blockShortsSet').checked;
 
         // Save the configuration
-        chrome.storage.sync.set({minTime, maxTime, blockShortsSet}, () => {
+        chrome.storage.sync.set({minTime_m, minTime_s, maxTime_m, maxTime_s, blockShortsSet}, () => {
             console.log('Configuration saved');
             console.log(blockShortsSet);
         });
@@ -36,6 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
          // Hide feedback message after 3 seconds
          setTimeout(() => {
              feedbackElement.style.display = 'none';
-         }, 3000);
+         }, Constants.FEEDBACK_MESSAGE_TIMEOUT);
     });
 });

@@ -11,6 +11,6 @@
     "permissions": ["activeTab", "notifications", "storage"],
     "content_scripts": [{
         "matches": ["*://*.youtube.com/*"],
-        "js": ["overlay.js", "messages.js", "content.js"]
+        "js": ["constants.js", "overlay.js", "messages.js", "content.js"]
     }]
 }

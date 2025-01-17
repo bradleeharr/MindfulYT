@@ -1,3 +1,4 @@
+// overlay.js
 
 window.showOverlay = function(message) {
     // Create overlay

@@ -1,3 +1,4 @@
+// content.js
 
 function randomPopupTrigger() {
     let randomTime = Math.random() * (window.config.maxTime - window.config.minTime) + window.config.minTime;
@@ -62,10 +63,10 @@ function blockShorts() {
         var channelNameInterval = setInterval(checkForChannelName, 1000);  // Check every second
     }
 
-    chrome.storage.sync.get(['minTime', 'maxTime'], (result) => {
+    chrome.storage.sync.get(['minTime_m', 'minTime_s', 'maxTime_m', 'maxTime_s'], (result) => {
         window.config = {
-            minTime: result.minTime || 60000,  // default to 60 seconds if not set
-            maxTime: result.maxTime || 300000  // default to 5 minutes if not set
+            minTime: (result.minTime_m * Constants.MIN_TO_S + result.minTime_s) * Constants.S_TO_MS || 1 * Constants.MIN_TO_S * Constants.S_TO_MS,  // default to 60 seconds if not set
+            maxTime: (result.maxTime_m * Constants.MIN_TO_S + result.maxTime_s) * Constants.S_TO_MS || 5 * Constants.MIN_TO_S * Constants.S_TO_MS  // default to 5 minutes if not set
         };
         randomPopupTrigger();
     });

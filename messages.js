@@ -1,3 +1,5 @@
+// messages.js
+
 window.messagesList = [
     "Time flies when you’re having fun, but don’t forget to take care of yourself!",
     "Engage in something creative or productive after this video!",
