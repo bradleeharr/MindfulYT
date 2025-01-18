@@ -12,26 +12,26 @@ To install this extension from the source on Chrome, follow the following steps.
 
 ## Install
 
-* Clone this repository
+Clone this repository
 ```
 git clone https://github.com/bradleeharr/MindfulYT.git
 ```
-* In a Chrome browser, go to **chrome://extensions/**
+In a Chrome browser, go to **chrome://extensions/**
 <p align="center">
  <img src="https://github.com/user-attachments/assets/fcc0df47-4ff7-44aa-92db-5a00fdd2e409">
 </p>
-* At the top right, turn on "**Developer Mode**"
+At the top right, turn on "**Developer Mode**"
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be011f31-0ed7-4ed4-a696-3a09a1ea0951">
 </p>
 
-* A ribbon will open on the top left. Select "**Load Unpacked"**
+A ribbon will open on the top left. Select "**Load Unpacked"**
 <p align="center">
   <img src="https://github.com/user-attachments/assets/472bb63b-fb05-4c6f-9c4e-044cc5f9fa10">
 </p>
 
-* Navigate to the folder where you have cloned this repository, then select "Add folder"
+Navigate to the folder where you have cloned this repository, then select "Add folder"
 
 ## Configuration
 
@@ -47,7 +47,7 @@ There are currently two configuration options, the minimum time for a notificati
  <img src="https://github.com/user-attachments/assets/44e80427-0687-4785-bafa-f691a1c57b20">
 </p>
 
-* Block shorts is _experimental_, with the goal being to block YouTube shorts, as they are short-form content. It currently should block the video content when in the YouTube Shorts player, so you will no longer be able to see the video content.
+Block shorts is _experimental_, with the goal being to block YouTube shorts, as they are short-form content. It currently should block the video content when in the YouTube Shorts player, so you will no longer be able to see the video content.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6fcb99ef-ac4e-495b-9f90-13e8a9b5e178">
