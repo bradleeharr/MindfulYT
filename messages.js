@@ -18,5 +18,5 @@ window.messagesList = [
     "Never say never, because limits, like fears, are often just an illusion. -Michael Jordan",
     "Do or do not. There is no try.",
     "Lost time is never found again. -Ben Franklin",
-
+    "Once you get the message, hang up the phone -Alan Watts",
 ];
