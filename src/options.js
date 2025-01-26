@@ -3,26 +3,28 @@
 // When the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Load existing config
-    chrome.storage.sync.get(['minTime_m', 'minTime_s', 'maxTime_m', 'maxTime_s'], (result) => {
+    chrome.storage.sync.get(['minTime_m', 'minTime_s', 'maxTime_m', 'maxTime_s', 'blackList'], (result) => {
         console.log(result)
         document.getElementById('minTime-m').value = result.minTime_m || '';
         document.getElementById('minTime-s').value = result.minTime_s || '';
-
         document.getElementById('maxTime-m').value = result.maxTime_m || '';
         document.getElementById('maxTime-s').value = result.maxTime_s || '';
+        document.getElementById('blacklisted'.textContent = result.blackListedChannels)
     });
 
     // Save button listener
-    document.getElementById('save').addEventListener('click', () => {
-        let minTime_m = parseInt(document.getElementById('minTime-m').value);
+    document.getElementById('save').addEventListener('click', () => { let minTime_m = parseInt(document.getElementById('minTime-m').value);
         let minTime_s = parseInt(document.getElementById('minTime-s').value);
-
         let maxTime_m = parseInt(document.getElementById('maxTime-m').value);
         let maxTime_s = parseInt(document.getElementById('maxTime-s').value);
+
+        let newBlackListedChannel = (document.getElementById('newBlacklistedChannel').textContent);
         let blockShortsSet = document.getElementById('blockShortsSet').checked;
 
         // Save the configuration
-        chrome.storage.sync.set({minTime_m, minTime_s, maxTime_m, maxTime_s, blockShortsSet}, () => {
+        chrome.storage.sync.set({minTime_m,
+                                 minTime_s,
+                                 maxTime_m, maxTime_s, blockShortsSet}, () => {
             console.log('Configuration saved');
             console.log(blockShortsSet);
         });
