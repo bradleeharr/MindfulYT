@@ -47,7 +47,7 @@ There are currently two configuration options, the minimum time for a notificati
  <img src="https://github.com/user-attachments/assets/44e80427-0687-4785-bafa-f691a1c57b20">
 </p>
 
-Block shorts is _experimental_, with the goal being to block YouTube shorts, as they are short-form content. It currently should block the video content when in the YouTube Shorts player, so you will no longer be able to see the video content.
+Block shorts is _experimental_, with the goal being to block YouTube shorts, as they are short-form content that can serve as a distracting time-sink. It currently should block the video content when in the YouTube Shorts player, so you will no longer be able to see the video content.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6fcb99ef-ac4e-495b-9f90-13e8a9b5e178">
