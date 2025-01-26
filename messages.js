@@ -20,4 +20,6 @@ window.messagesList = [
     "Lost time is never found again. -Ben Franklin",
     "Once you get the message, hang up the phone -Alan Watts",
     "How small a thought it takes to fill a whole life -Ludwig Wittgenstein",
+    "Show me a man who has never made a mistake, and I will show you one who has never tried anything. -Albert Einstein",
+
 ];
