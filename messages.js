@@ -19,5 +19,5 @@ window.messagesList = [
     "Do or do not. There is no try.",
     "Lost time is never found again. -Ben Franklin",
     "Once you get the message, hang up the phone -Alan Watts",
-"How small a thought it takes to fill a whole life -Ludwig Wittgenstein",
+    "How small a thought it takes to fill a whole life -Ludwig Wittgenstein",
 ];
