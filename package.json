@@ -1,0 +1,26 @@
+{
+  "name": "mindfulyt",
+  "version": "0.2.1",
+  "description": "Mindful Youtube Browsing",
+  "main": "content.js",
+  "scripts": {
+    "test": "echo \"No tests specified. Please configure.\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradleeharr/MindfulYT.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "youtube",
+    "focus",
+    "productivity",
+    "time-management"
+  ],
+  "author": "Bradlee Harrison",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bradleeharr/MindfulYT/issues"
+  },
+  "homepage": "https://github.com/bradleeharr/MindfulYT#readme"
+}
