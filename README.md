@@ -20,8 +20,8 @@ In a Chrome browser, go to **chrome://extensions/**
 <p align="center">
  <img src="https://github.com/user-attachments/assets/fcc0df47-4ff7-44aa-92db-5a00fdd2e409">
 </p>
-At the top right, turn on "**Developer Mode**"
 
+At the top right, turn on "**Developer Mode**"
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be011f31-0ed7-4ed4-a696-3a09a1ea0951">
 </p>
@@ -31,7 +31,7 @@ A ribbon will open on the top left. Select "**Load Unpacked"**
   <img src="https://github.com/user-attachments/assets/472bb63b-fb05-4c6f-9c4e-044cc5f9fa10">
 </p>
 
-Navigate to the folder where you have cloned this repository, then select "Add folder"
+Navigate to the folder where you have cloned this repository, then select "**Add folder**"
 
 ## Configuration
 
