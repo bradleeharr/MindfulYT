@@ -4,15 +4,34 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Load existing config
   chrome.storage.sync.get(
-    ["minTime_m", "minTime_s", "maxTime_m", "maxTime_s", "blackList"],
+    [
+      "minTime_m",
+      "minTime_s",
+      "maxTime_m",
+      "maxTime_s",
+      "blockShortsSet",
+      "newBlacklistedChannel",
+      "blacklistedChannels",
+    ],
     (result) => {
       console.log(result);
       document.getElementById("minTime-m").value = result.minTime_m || "";
       document.getElementById("minTime-s").value = result.minTime_s || "";
       document.getElementById("maxTime-m").value = result.maxTime_m || "";
       document.getElementById("maxTime-s").value = result.maxTime_s || "";
-      document.getElementById("blacklisted").textContent =
-        result.blackListedChannels;
+
+      let blacklist = document.getElementById("blacklist");
+
+      console.log(result.blacklistedChannels);
+
+      if (result.blacklistedChannels) {
+        result.blacklistedChannels.forEach((channelName) => {
+          const listItem = document.createElement("div");
+          listItem.className = "blacklist-item";
+          listItem.textContent = channelName;
+          blacklist.appendChild(listItem);
+        });
+      }
     },
   );
 
@@ -23,32 +42,28 @@ document.addEventListener("DOMContentLoaded", () => {
     let maxTime_m = parseInt(document.getElementById("maxTime-m").value);
     let maxTime_s = parseInt(document.getElementById("maxTime-s").value);
     let blockShortsSet = document.getElementById("blockShortsSet").checked;
-    let newBlackListedChannel = document.getElementById(
+    let newBlacklistedChannel = document.getElementById(
       "newBlacklistedChannel",
     ).value;
 
     // Handle the list of blacklisted channels. We have to first get from chrome storage
     // to then update
-    let blackListedChannels = [];
-    chrome.storage.sync.get(["blackListedChannels"], (result) => {
-      blackListedChannels = result.blackListedChannels;
-      blackListedChannels.push(newBlackListedChannel);
+    chrome.storage.sync.get(["blacklistedChannels"], (result) => {
+      let blacklistedChannels = result.blacklistedChannels || [];
+
+      console.log("newBlackListedChannel: ", newBlacklistedChannel);
+      console.log("blacklistedChannels: ", blacklistedChannels);
+      blacklistedChannels.push(newBlacklistedChannel);
 
       // Save the configuration
-      chrome.storage.sync.set(
-        {
-          minTime_m,
-          minTime_s,
-          maxTime_m,
-          maxTime_s,
-          blockShortsSet,
-          blackListedChannels,
-        },
-        () => {
-          console.log("Blacklisted Channels: ", blackListedChannels);
-          console.log("Configuration saved");
-        },
-      );
+      chrome.storage.sync.set({
+        minTime_m,
+        minTime_s,
+        maxTime_m,
+        maxTime_s,
+        blockShortsSet,
+        blacklistedChannels,
+      });
     });
 
     // Show feedback message
