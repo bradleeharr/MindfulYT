@@ -5,14 +5,19 @@
   "description": "",
 
   "icons": {
-    "48": "icons/icon.png"
+    "48": "icons/logo.png"
   },
-  "options_page": "options.html",
+  "options_page": "src/options.html",
   "permissions": ["activeTab", "notifications", "storage"],
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": ["constants.js", "overlay.js", "messages.js", "content.js"]
+      "js": [
+        "src/constants.js",
+        "src/overlay.js",
+        "src/messages.js",
+        "src/content.js"
+      ]
     }
   ]
 }
