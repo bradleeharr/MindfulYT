@@ -1,65 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Extension Options</title>
-    <link rel="stylesheet" href="options.css" />
-  </head>
-  <body>
-    <div class="container">
-      <a href="https://github.com/bradleeharr/MindfulYT">
-        <img
-          src="../icons/logo.png"
-          style="
-            border-radius: 15px;
-            border-color: black;
-            border-width: 2px;
-            border: solid;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-          "
-        />
-      </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Extension Options</title>
+        <link rel="stylesheet" href="options.css" />
+    </head>
+    <body>
+        <div class="container">
+            <a href="https://github.com/bradleeharr/MindfulYT">
+                <img
+                    src="../icons/logo.png"
+                    style="
+                        border-radius: 15px;
+                        border-color: black;
+                        border-width: 2px;
+                        border: solid;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                    "
+                />
+            </a>
 
-      <h1>Mindful YouTube Extension Options</h1>
-      <label>
-        Min Time:
-        <input type="number" id="minTime-m" min="1" value="10" /> (min)
-        <input type="number" id="minTime-s" min="1" value="00" /> (s)
-      </label>
-      <label>
-        Max Time:
-        <input type="number" id="maxTime-m" min="1" value="30" /> (min)
-        <input type="number" id="maxTime-s" min="1" value="00" /> (s)
-      </label>
-      <label> </label>
-      <label>
-        Blacklist Channel:
-        <input type="text" id="newBlacklistedChannel" />
-      </label>
-      <label>
-        Blacklisted Channels
-        <div id="blacklist"></div>
-      </label>
-      <br />
-      <label>
-        Block Shorts:
-        <input type="checkbox" id="blockShortsSet" checked />
-      </label>
-      <label>
-        Enable Notifications:
-        <input type="checkbox" id="enableNotifications" checked />
-      </label>
-      <br />
-      <span
-        id="feedback"
-        style="display: none; margin-left: 10px; color: green"
-      ></span>
-      <br /><br />
-      <button id="save">Save</button>
-      <br />
-    </div>
-    <script src="constants.js"></script>
-    <script src="options.js"></script>
-  </body>
+            <h1>Mindful YouTube Extension Options</h1>
+            <label>
+                Min Time:
+                <input type="number" id="minTime-m" min="1" value="10" /> (min)
+                <input type="number" id="minTime-s" min="1" value="00" /> (s)
+            </label>
+            <label>
+                Max Time:
+                <input type="number" id="maxTime-m" min="1" value="30" /> (min)
+                <input type="number" id="maxTime-s" min="1" value="00" /> (s)
+            </label>
+            <label> </label>
+            <label>
+                Blacklist Channel:
+                <input type="text" id="newBlacklistedChannel" />
+            </label>
+            <label>
+                Blacklisted Channels
+                <div id="blacklist"></div>
+            </label>
+            <br />
+            <label>
+                Block Shorts:
+                <input type="checkbox" id="blockShortsSet" checked />
+            </label>
+            <label>
+                Enable Notifications:
+                <input type="checkbox" id="enableNotifications" checked />
+            </label>
+            <br />
+            <span
+                id="feedback"
+                style="display: none; margin-left: 10px; color: green"
+            ></span>
+            <br /><br />
+            <button id="save">Save</button>
+            <br />
+        </div>
+        <script src="constants.js"></script>
+        <script src="options.js"></script>
+    </body>
 </html>
