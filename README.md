@@ -3,6 +3,7 @@ This is a simple browser extension that will occasionally prompt you a simple re
 
 Features
 
+* Periodic Reminders
 * Block Shorts
 
 
