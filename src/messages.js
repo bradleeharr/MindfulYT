@@ -23,5 +23,5 @@ window.messagesList = [
   "Show me a man who has never made a mistake, and I will show you one who has never tried anything. —Albert Einstein",
   "Stumbling is not falling. —Malcolm X",
   "Our lives begin to end the day we become silent about things that matter. ― Martin Luther King Jr",
-
+  "The best time to start was last week. The second best time to start is now.",
 ];
