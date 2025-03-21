@@ -24,4 +24,7 @@ window.messagesList = [
   "Stumbling is not falling. —Malcolm X",
   "Our lives begin to end the day we become silent about things that matter. ― Martin Luther King Jr",
   "The best time to start was last week. The second best time to start is now.",
+  "Enjoy the present. It may feel tough, but it could be the best time of your life.",
+
+
 ];
