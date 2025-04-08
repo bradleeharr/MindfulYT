@@ -26,5 +26,5 @@ window.messagesList = [
   "The best time to start was last week. The second best time to start is now.",
   "Enjoy the present. It may feel tough, but it could be the best time of your life.",
   "The only source of knowledge is experience. -Albert Einstein", 
-
+  "Even a dead cat will bounce if it falls from a great height",
 ];
