@@ -29,4 +29,5 @@ window.messagesList = [
   "Even a dead cat will bounce if it falls from a great height",
   "Life finds a way ― Michael Crichton, Jurassic Park",
   "...The second best time is today",
+  "Start chasing things that make you proud of yourself instead of happy, and happiness will come with it.",
 ];
