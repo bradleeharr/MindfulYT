@@ -31,4 +31,5 @@ window.messagesList = [
   "...The second best time is today",
   "Start chasing things that make you proud of yourself instead of happy, and happiness will come with it.",
   "Everything's going to be alright",
+  "You don't train for the 200m dash by walking to your mailbox everyday. Start challenging yourself.",
 ];
