@@ -1,8 +1,9 @@
-# MindfulYT v0.2.1
+# MindfulYT v0.2.2
 This is a simple browser extension that will occasionally prompt you a simple reminder to take a break when watching YouTube videos. 
 
 Features
 
+* Periodic Reminders
 * Block Shorts
 
 
