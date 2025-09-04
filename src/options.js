@@ -1,5 +1,3 @@
-// options.js
-
 const chromeStorageObjects = [
     "minTime_m",
     "minTime_s",
@@ -19,8 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("minTime-s").value = result.minTime_s || "";
         document.getElementById("maxTime-m").value = result.maxTime_m || "";
         document.getElementById("maxTime-s").value = result.maxTime_s || "";
-        document.getElementById("blockShortsSet").value =
-            result.blockShortsSet || "";
+        document.getElementById("blockShortsSet").value = result.blockShortsSet || "";
         document.getElementById("newBlacklistedChannel").value = "";
 
         let blacklist = document.getElementById("blacklist");
@@ -57,9 +54,7 @@ function saveSettings() {
     let maxTime_m = parseInt(document.getElementById("maxTime-m").value);
     let maxTime_s = parseInt(document.getElementById("maxTime-s").value);
     let blockShortsSet = document.getElementById("blockShortsSet").checked;
-    let newBlacklistedChannel = document.getElementById(
-        "newBlacklistedChannel",
-    ).value;
+    let newBlacklistedChannel = document.getElementById("newBlacklistedChannel").value;
 
     // Handle the list of blacklisted channels. We have to first get from chrome storage
     // to then update
