@@ -32,4 +32,6 @@ window.messagesList = [
   "Start chasing things that make you proud of yourself instead of happy, and happiness will come with it.",
   "Everything's going to be alright",
   "You don't train for the 200m dash by walking to your mailbox everyday. Start challenging yourself.",
+  "Hard work beats talent.",
+  "You can be happy or miserable. The amount of work is the same.",
 ];
