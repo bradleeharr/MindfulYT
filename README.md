@@ -1,33 +1,76 @@
 # MindfulYT v0.2.2
-This is a simple browser extension that will occasionally prompt you a simple reminder to take a break when watching YouTube videos. 
+
+This is a simple browser extension that will occasionally prompt you a simple reminder to take a break when watching YouTube videos.
 
 Features
 
-* Periodic Reminders
-* Block Shorts
-
+- Periodic Reminders
+- Block Shorts
 
 # How to use
 
 To install this extension from the source on Chrome, follow the following steps. You will need to clone the repository, then load the unpacked extension in Chrome.
 
-## Install
+[Installation (Firerfox)]($InstallFirefox)
+[Installation (Chrome)](#InstallChrome)
+
+## Install (Fiefox) - Debug Mode
+
+<a id="InstallFirefox"></a>
 
 Clone this repository
+
+```
+git clone https;//github.com/bradleeharr/MindfulYT.git
+```
+
+In a powershell window, run the script `create-zip.ps1`
+
+```
+./create-zip.ps1
+```
+
+In the address bar, type about:config and press Enter.
+Click Accept the Risk and Continue.
+Search for:
+xpinstall.signatures.required (extensions)
+
+Toggle the setting to **False.**
+![alt text](image.png)
+
+In a Firefox browser go to **about:addons**
+
+Click the gear icon, and select "Install Add-on From File"
+![alt text](image-1.png)
+
+<p align="center">
+  <img src="">
+</p>
+
+## Install (Chrome)
+
+<a id="InstallChrome"></a>
+
+Clone this repository
+
 ```
 git clone https://github.com/bradleeharr/MindfulYT.git
 ```
+
 In a Chrome browser, go to **chrome://extensions/**
+
 <p align="center">
  <img src="https://github.com/user-attachments/assets/fcc0df47-4ff7-44aa-92db-5a00fdd2e409">
 </p>
 
 At the top right, turn on "**Developer Mode**"
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be011f31-0ed7-4ed4-a696-3a09a1ea0951">
 </p>
 
 A ribbon will open on the top left. Select "**Load Unpacked"**
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/472bb63b-fb05-4c6f-9c4e-044cc5f9fa10">
 </p>
@@ -42,7 +85,7 @@ To go to the options, click the extensions icon in the top right, then select th
  <img src="https://github.com/user-attachments/assets/a14d325b-fada-434d-b4c7-17aceb20781b">
 </p>
 
-There are currently two configuration options, the minimum time for a notification window to display, and a maximum time for a notification window to display. 
+There are currently two configuration options, the minimum time for a notification window to display, and a maximum time for a notification window to display.
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/44e80427-0687-4785-bafa-f691a1c57b20">
@@ -53,4 +96,3 @@ Block shorts is _experimental_, with the goal being to block YouTube shorts, as 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6fcb99ef-ac4e-495b-9f90-13e8a9b5e178">
 </p>
-
