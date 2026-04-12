@@ -11,15 +11,15 @@ body {
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
 
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 80%;
+    width: 90%;
 }
 
 label {
@@ -37,13 +37,13 @@ input {
 button {
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    background-color: #28a745;
+    border-radius: 2px;
+    background-color: #33a7ee;
     color: white;
     cursor: pointer;
     font-size: 16px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #3333ff;
 }
