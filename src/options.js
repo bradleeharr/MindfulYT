@@ -13,18 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
     chrome.storage.sync.get(chromeStorageObjects, (result) => {
         console.log(result);
         // Put existing config into the current fields on the options page
-        document.getElementById("minTime-m").value = result.minTime_m || "";
-        document.getElementById("minTime-s").value = result.minTime_s || "";
-        document.getElementById("maxTime-m").value = result.maxTime_m || "";
-        document.getElementById("maxTime-s").value = result.maxTime_s || "";
-        document.getElementById("blockShortsSet").value = result.blockShortsSet || "";
+        document.getElementById("minTime-m").value = result?.minTime_m || "";
+        document.getElementById("minTime-s").value = result?.minTime_s || "";
+        document.getElementById("maxTime-m").value = result?.maxTime_m || "";
+        document.getElementById("maxTime-s").value = result?.maxTime_s || "";
+        document.getElementById("blockShortsSet").value = result?.blockShortsSet || "";
         document.getElementById("newBlacklistedChannel").value = "";
 
         let blacklist = document.getElementById("blacklist");
 
-        console.log(result.blacklistedChannels);
-
-        if (result.blacklistedChannels) {
+        if (result?.blacklistedChannels) {
+            console.log(result.blacklistedChannels);
             result.blacklistedChannels.forEach((channelName) => {
                 const listItem = document.createElement("div");
                 listItem.className = "blacklist-item";
@@ -58,22 +57,25 @@ function saveSettings() {
 
     // Handle the list of blacklisted channels. We have to first get from chrome storage
     // to then update
+    let blacklistedChannels = [];
+
     chrome.storage.sync.get(["blacklistedChannels"], (result) => {
-        let blacklistedChannels = result.blacklistedChannels || [];
+        if (result?.blacklistedChannels) {
+            let blacklistedChannels = result.blacklistedChannels || [];
+            console.log("newBlackListedChannel: ", newBlacklistedChannel);
+            console.log("blacklistedChannels: ", blacklistedChannels);
+            blacklistedChannels.push(newBlacklistedChannel);
+        }
+    });
 
-        console.log("newBlackListedChannel: ", newBlacklistedChannel);
-        console.log("blacklistedChannels: ", blacklistedChannels);
-        blacklistedChannels.push(newBlacklistedChannel);
-
-        // Save the configuration
-        chrome.storage.sync.set({
-            minTime_m,
-            minTime_s,
-            maxTime_m,
-            maxTime_s,
-            blockShortsSet,
-            blacklistedChannels,
-        });
+    // Save the configuration
+    chrome.storage.sync.set({
+        minTime_m,
+        minTime_s,
+        maxTime_m,
+        maxTime_s,
+        blockShortsSet,
+        blacklistedChannels,
     });
 
     // Show feedback message
@@ -81,8 +83,8 @@ function saveSettings() {
     feedbackElement.textContent = "Settings saved!";
     feedbackElement.style.display = "inline";
 
-    // Hide feedback message after 3 seconds
+    // Hide feedback message after FEEDBACK_MESSAGE_TIMEOUT seconds
     setTimeout(() => {
         feedbackElement.style.display = "none";
-    }, Constants.FEEDBACK_MESSAGE_TIMEOUT);
+    }, TimeConstants.FEEDBACK_MESSAGE_TIMEOUT);
 }

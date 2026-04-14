@@ -59,7 +59,7 @@ window.showOverlay = function (message) {
                  transform: translateY(0);
                  opacity: 1;
              }
-         }
+         } 
      `;
     document.head.appendChild(style);
 
