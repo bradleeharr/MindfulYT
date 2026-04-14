@@ -1,23 +1,24 @@
 {
-  "manifest_version": 3,
-  "name": "Mindful YouTube Browsing",
-  "version": "0.2.1",
-  "description": "",
+    "manifest_version": 3,
+    "name": "Mindful YouTube Browsing",
+    "version": "0.2.1",
+    "description": "",
 
-  "icons": {
-    "48": "icons/logo.png"
-  },
-  "options_page": "src/options.html",
-  "permissions": ["activeTab", "notifications", "storage"],
-  "content_scripts": [
-    {
-      "matches": ["*://*.youtube.com/*"],
-      "js": [
-        "src/constants.js",
-        "src/overlay.js",
-        "src/messages.js",
-        "src/content.js"
-      ]
-    }
-  ]
+    "icons": {
+        "48": "icons/logo.png"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "aeaefaehea@aeheaheaearewqe2.com"
+        }
+    },
+    "options_page": "src/options.html",
+    "permissions": ["activeTab", "notifications", "storage", "webRequest", "webRequestBlocking"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["src/constants.js", "src/overlay.js", "src/messages.js", "src/content.js"]
+        }
+    ]
 }
