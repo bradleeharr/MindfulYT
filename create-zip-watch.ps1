@@ -2,9 +2,9 @@
 Function Register-Watcher {
     param (
         $folder,
-        $changeAction
+        $changeAction,
+        $filter
     )
-    $filter = "*.*" #all files
     $watcher = New-Object IO.FileSystemWatcher $folder, $filter -Property @{ 
         IncludeSubdirectories = $true
         EnableRaisingEvents = $true
@@ -18,7 +18,7 @@ Function Register-Watcher {
 
 }
 
-$watchDir = "$PSScriptRoot\\src"
+$watchDir = "$PSScriptRoot\\src\"
 $action = ".\$PSScriptRoot\\create-zip.ps1"
 $changeAction = [scriptblock]::Create('
     $path = $Event.SourceEventArgs.FullPath
@@ -31,6 +31,8 @@ $changeAction = [scriptblock]::Create('
 
 #while ($true) {
     echo "Watching $watchDir..."
-    $watcher = Register-Watcher $watchDir $changeAction
+    $watcher = Register-Watcher $watchDir $changeAction -Filter "*.*"
+    $watcher = Register-Watcher "." $changeAction -Filter "manifest.json"
+
 #}
  
