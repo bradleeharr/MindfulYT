@@ -41,10 +41,9 @@ Toggle the setting to **False.**
 In a Firefox browser go to **about:addons**
 
 Click the gear icon, and select "Install Add-on From File"
-![alt text](image-1.png)
 
 <p align="center">
-  <img src="">
+  <img src="image-1.png">
 </p>
 
 ## Install (Chrome)
@@ -96,3 +95,7 @@ Block shorts is _experimental_, with the goal being to block YouTube shorts, as 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6fcb99ef-ac4e-495b-9f90-13e8a9b5e178">
 </p>
+
+## Linting
+
+`npx eslint`
