@@ -9,3 +9,4 @@ $files = @(
 )
 
 7z a $zipFile $files
+echo "Created zip $zipFile"
