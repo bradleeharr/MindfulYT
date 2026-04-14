@@ -36,14 +36,14 @@ Search for:
 xpinstall.signatures.required (extensions)
 
 Toggle the setting to **False.**
-![alt text](image.png)
+![alt text](icons/image.png)
 
 In a Firefox browser go to **about:addons**
 
 Click the gear icon, and select "Install Add-on From File"
 
 <p align="center">
-  <img src="image-1.png">
+  <img src="icons/image-1.png">
 </p>
 
 ## Install (Chrome)
