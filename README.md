@@ -24,24 +24,27 @@ Clone this repository
 git clone https;//github.com/bradleeharr/MindfulYT.git
 ```
 
-In a powershell window, run the script `create-zip.ps1`
+In a powershell window, run the script `create-zip.ps1` (Or, in a shell run the script `create-zip.sh`) 
 
-```
+```powershell
 ./create-zip.ps1
 ```
+```sh
+./create-zip.sh
+```
 
-* In the address bar, type about:config and press Enter.
+* In the address bar, type **about:config** and press Enter.
 * Click Accept the Risk and Continue.
 * Search for: `xpinstall.signatures.required (extensions)`
 * Toggle the setting to **False.**
 	* ![alt text](icons/image.png)
 * In a Firefox browser go to **about:addons**
-* Click the gear icon, and select "Install Add-on From File"
-
+* Click the gear icon, and select "Debug Addons"
+* Click "Load Temporary Add-on"
+* Select the created **myt_firefox.zip** file.
 <p align="center">
   <img src="icons/image-1.png">
 </p>
-
 * Your extension is now installed.
 
 
