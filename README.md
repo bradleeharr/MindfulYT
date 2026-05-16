@@ -30,21 +30,22 @@ In a powershell window, run the script `create-zip.ps1`
 ./create-zip.ps1
 ```
 
-In the address bar, type about:config and press Enter.
-Click Accept the Risk and Continue.
-Search for:
-xpinstall.signatures.required (extensions)
-
-Toggle the setting to **False.**
-![alt text](icons/image.png)
-
-In a Firefox browser go to **about:addons**
-
-Click the gear icon, and select "Install Add-on From File"
+* In the address bar, type about:config and press Enter.
+* Click Accept the Risk and Continue.
+* Search for: `xpinstall.signatures.required (extensions)`
+* Toggle the setting to **False.**
+	* ![alt text](icons/image.png)
+* In a Firefox browser go to **about:addons**
+* Click the gear icon, and select "Install Add-on From File"
 
 <p align="center">
   <img src="icons/image-1.png">
 </p>
+
+* Your extension is now installed.
+
+
+
 
 ## Install (Chrome)
 
