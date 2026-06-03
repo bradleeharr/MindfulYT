@@ -36,8 +36,16 @@ window.showOverlay = function (message) {
     messageElem.style.color = "white";
     messageElem.style.textAlign = "center";
     messageElem.style.animation = "scrollIn 2s"; // Add animation to text
-
     overlay.appendChild(messageElem);
+
+    const secondsElem = document.createElement("p");
+    secondsElem.textContent = "___";
+    secondsElem.style.fontFamily = "Arial, sans-serif";
+    secondsElem.style.fontSize = "2em";
+    secondsElem.style.color = "white"
+    secondsElem.style.textAlign = "center";
+    secondsElem.style.width = "100vw";
+    overlay.appendChild(secondsElem);
 
     // Append overlay to body
     document.body.appendChild(overlay);
@@ -63,11 +71,24 @@ window.showOverlay = function (message) {
      `;
     document.head.appendChild(style);
 
-    // Remove overlay on click
+    SECONDS = 30;
+    let seconds = SECONDS; // TODO make this a config 
+    function secondPassed() {
+        console.log("seconds: ", seconds);
+        secondsElem.textContent = seconds;
+        seconds = seconds > 0 ? seconds - 1 : 0;
+    }
+    setInterval(() => {
+        secondPassed();
+    }, 1000);
+
+    // Remove overlay on click AFTE seconds have passed
     overlay.addEventListener("click", () => {
-        document.body.removeChild(overlay);
-        // But add the random popup trigger again
-        randomPopupTrigger();
+        if (seconds <= 0) {
+            document.body.removeChild(overlay);
+            randomPopupTrigger();
+            seconds = SECONDS;
+        }
     });
 
     // Pause video (if any)
