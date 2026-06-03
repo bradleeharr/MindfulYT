@@ -18,6 +18,7 @@ To install this extension from the source on Chrome, follow the following steps.
 
 <a id="InstallFirefox"></a>
 
+* [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) recommended for ongoing development
 Clone this repository
 
 ```
