@@ -11,5 +11,5 @@ files=(
 )
 
 echo "Files: ${files[@]}"
-zip -r -f "$zipFile" ${files[@]}
+zip -r $@ "$zipFile" ${files[@]}
 echo "Created zip $zipFile"
